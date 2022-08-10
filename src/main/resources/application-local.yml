@@ -1,0 +1,17 @@
+spring:
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    password: admin
+    tomcat:
+      initialSize: 20
+      max-active: 20
+      maxIdle: 20
+    url: jdbc:postgresql://localhost:5432/CCIMSDEV
+    username: postgres
+logging:
+  config: classpath:logback-spring.xml
+  level:
+    org:
+      springframework:
+        cache: DEBUG
+    root: INFO

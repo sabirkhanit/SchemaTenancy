@@ -1,0 +1,24 @@
+server:
+  servlet:
+   context-path: /schematenancy
+  port: 8081
+spring:
+  application:
+    name: Spring Boot Project to demonstrate Schema Tenancy in a single DB
+  jpa:
+    hibernate:
+      ddl-auto: update
+      naming:
+       implicit-strategy: org.hibernate.boot.model.naming.ImplicitNamingStrategyLegacyJpaImpl 
+       physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl 
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+        format_sql: true
+        show_sql: true
+        globally_quoted_identifiers: true
+  profiles:
+    active: local
+  mvc:
+   pathmatch:
+    matching-strategy: ANT_PATH_MATCHER

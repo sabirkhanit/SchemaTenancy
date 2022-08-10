@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+
+	<include resource="org/springframework/boot/logging/logback/base.xml" />
+	<timestamp key="timestamp-by-second" datePattern="yyyyMMdd'T'HHmmss" />
+	<appender name="Console-Appender" class="ch.qos.logback.core.ConsoleAppender">
+		<layout>
+			<pattern>%date %level [%thread] %logger{10} [%file:%line] %msg%n
+			</pattern>
+		</layout>
+	</appender>
+</configuration>
